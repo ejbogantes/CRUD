@@ -8,6 +8,117 @@ All Notable changes to `Backpack CRUD` will be documented in this file.
 
 -----------
 
+
+## 4.0.36 - 2020-01-28
+
+### Fixed
+- merged #2401 fixes #2390 - dropdown filter did not properly reset when clearing filters;
+
+
+## 4.0.35 - 2020-01-23
+
+### Fixed
+- merged #2389 - print button on Show operation (aka Preview);
+- merged #2386 - overwrite new loggedOut() method in LoginController instead of logout();
+- merged #2395 - simplemde field should not download FontAwesome;
+
+
+## 4.0.34 - 2020-01-20
+
+### Fixed
+- merged #2377 - updated Chinese translation;
+- merged #2359 - fix field label generation when name is an array;
+
+
+## 4.0.33 - 2020-01-15
+
+### Fixed
+- merged #2353 - markdown column does not show error when null on Laravel 6.10+;
+
+
+## 4.0.32 - 2020-01-14
+
+### Added
+- merged #2351 & #2352 - Indonesian language file;
+- merged #2369 - fixes #2365 and #2366 - browse_multiple field type had an extra php tag;
+
+
+## 4.0.31 - 2020-01-03
+
+### Fixed
+- merged #2330 - translation strings for clone button;
+- merged #2343 fixes #2338 - installation on windows failed if the public/uploads directory existed; 
+
+
+## 4.0.30 - 2019-12-20
+
+### Fixed
+- merged #2324 fixes #2323 - multiple summernote fields on page with different options;
+- merged #2294 fixes #2293 - request inconsistency between Controller and CrudPanel object;
+
+
+## 4.0.29 - 2019-12-19
+
+### Added
+- support for PHP 7.4;
+
+### Fixed
+- merged #2183 fixes #1797 - columns weren't orderable in MSSQL;
+
+
+## 4.0.28 - 2019-12-19
+
+### Added
+- Persian language added;
+
+### Fixed
+- merged #2136 - fixed Create operation with foreign keys that are not inside the form;
+- reversed Laravel composer requirement - first 6, then 5.8;
+
+
+## 4.0.27 - 2019-12-17
+
+### Fixed
+- #2306 - pt-BR translation fixes;
+- changed default "install elFinder" answer to "false" when installing Backpack;
+- fixed installation progress bar;
+- fixed ScrutinizerCI warnings on installation process;
+
+
+## 4.0.26 - 2019-12-16
+
+### Fixed
+- #2149 - select2_multiple field support for UUIDs;
+
+
+## 4.0.25 - 2019-12-16
+
+### Fixed
+- #2292 - admin panel home link broke the installation because it used url() inside config files;
+
+
+## 4.0.24 - 2019-12-14
+
+### Fixed
+- merged #2287 - CrudTrait's ```isColumnNullable``` should not throw error if the column does not exist; that way you can use it on non-existing columns;
+- merged #2292 fixes #2289 - config for changing the URL for the top-left logo to something else;
+- merged #2101 - Don't force the default controller namespace;
+- merged #2268 - video field's input should be type url not text;
+
+
+## 4.0.23 - 2019-12-02
+
+### Fixed
+- merged #2270 - missing ES language translations;
+- merged #2261 - browse_multiple field can now be sortable;
+
+
+## 4.0.22 - 2019-11-25
+
+### Fixed
+- merged #2260 - image field type JS function name was wrong;
+
+
 ## 4.0.21 - 2019-11-23
 
 ### Fixed

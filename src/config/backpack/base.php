@@ -26,6 +26,13 @@ return [
     // Project name. Shown in the window title.
     'project_name' => 'Backpack Admin Panel',
 
+    // When clicking on the admin panel's top-left logo/name,
+    // where should the user be redirected?
+    // The string below will be passed through the url() helper.
+    // - default: '' (project root)
+    // - alternative: 'admin' (the admin's dashboard)
+    'home_link' => '',
+
     // Content of the HTML meta robots tag to prevent indexing and link following
     'meta_robots_content' => 'noindex, nofollow',
 
@@ -93,7 +100,7 @@ return [
     // ------
 
     // Footer element classes.
-    'footer_class' => 'app-footer',
+    'footer_class' => 'app-footer d-print-none',
     // hide it with d-none
     // change background color with bg-dark, bg-primary, bg-secondary, bg-danger, bg-warning, bg-success, bg-info, bg-blue, bg-light-blue, bg-indigo, bg-purple, bg-pink, bg-red, bg-orange, bg-yellow, bg-green, bg-teal, bg-cyan, bg-white
 
