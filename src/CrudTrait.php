@@ -52,7 +52,7 @@ trait CrudTrait
         // register the enum column type, because Doctrine doesn't support it
         $conn->getDoctrineSchemaManager()->getDatabasePlatform()->registerDoctrineTypeMapping('enum', 'string');
 
-        return ! $conn->getDoctrineColumn($table, $column_name)->getNotnull();
+        return !$conn->getDoctrineColumn($table, $column_name)->getNotnull();
     }
 
     /*
@@ -71,11 +71,11 @@ trait CrudTrait
         foreach ($columns as $key => $column) {
             $column_contents = $this->{$column};
 
-            if (! is_object($this->{$column})) {
+            if (!is_object($this->{$column})) {
                 $column_contents = json_decode($this->{$column});
             }
 
-            if (count($column_contents)) {
+            if (count((array) $column_contents)) {
                 foreach ($column_contents as $fake_field_name => $fake_field_value) {
                     $this->setAttribute($fake_field_name, $fake_field_value);
                 }
@@ -94,7 +94,7 @@ trait CrudTrait
     {
         $model = '\\'.get_class($this);
 
-        if (! count($columns)) {
+        if (!count($columns)) {
             $columns = (property_exists($model, 'fakeColumns')) ? $this->fakeColumns : ['extras'];
         }
 
@@ -119,10 +119,10 @@ trait CrudTrait
      *     - if the value is null, deletes the file and sets null in the DB
      *     - if the value is different, stores the different file and updates DB value.
      *
-     * @param  [type] $value            Value for that column sent from the input.
-     * @param  [type] $attribute_name   Model attribute name (and column in the db).
-     * @param  [type] $disk             Filesystem disk used to store files.
-     * @param  [type] $destination_path Path in disk where to store the files.
+     * @param [type] $value            Value for that column sent from the input
+     * @param [type] $attribute_name   Model attribute name (and column in the db)
+     * @param [type] $disk             Filesystem disk used to store files
+     * @param [type] $destination_path Path in disk where to store the files
      */
     public function uploadFileToDisk($value, $attribute_name, $disk, $destination_path)
     {
@@ -166,10 +166,10 @@ trait CrudTrait
      *     - deletes the file
      *     - removes that file from the DB.
      *
-     * @param  [type] $value            Value for that column sent from the input.
-     * @param  [type] $attribute_name   Model attribute name (and column in the db).
-     * @param  [type] $disk             Filesystem disk used to store files.
-     * @param  [type] $destination_path Path in disk where to store the files.
+     * @param [type] $value            Value for that column sent from the input
+     * @param [type] $attribute_name   Model attribute name (and column in the db)
+     * @param [type] $disk             Filesystem disk used to store files
+     * @param [type] $destination_path Path in disk where to store the files
      */
     public function uploadMultipleFilesToDisk($value, $attribute_name, $disk, $destination_path)
     {
