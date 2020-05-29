@@ -75,6 +75,10 @@ trait CrudTrait
                 $column_contents = json_decode($this->{$column});
             }
 
+            if (is_null($column_contents)) {
+                $column_contents = [];
+            }
+
             if (count((array) $column_contents)) {
                 foreach ($column_contents as $fake_field_name => $fake_field_value) {
                     $this->setAttribute($fake_field_name, $fake_field_value);
